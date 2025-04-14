@@ -1,6 +1,6 @@
 const sum = (num1, num2) => num1 + num2;
 
-console.log(sum(7, 3));
+// console.log(sum(7, 3));
 
 // Declaramos una función con el nombre exacto "formEuroToDollar"
 const fromEuroToDollar = function(valueInEuro) {
@@ -16,7 +16,13 @@ const fromDollarToYen = (valueInDollar) => {
     return valueInYen;
 }
 
-console.log(fromDollarToYen(1));
+const fromYenToPound = (valueInYen) => {
+    let valueInEuro = valueInYen / 156.5;
+    let valueInPound = valueInEuro * 0.87;
+    return valueInPound;
+};
+
+console.log(fromYenToPound(1));
 
 
-module.exports = {sum, fromEuroToDollar, fromDollarToYen};
+module.exports = {sum, fromEuroToDollar, fromDollarToYen, fromYenToPound};

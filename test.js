@@ -27,3 +27,11 @@ test("One dollar should be 146.26 dollars", function() {
 
     expect(yenResult).toBe(146.26168224299064);
 })
+
+test("One dollar should be 146.26 dollars", function() {
+    const { fromYenToPound } = require('./app.js');
+
+    let yenResult = fromYenToPound(1);
+
+    expect(yenResult).toBe(0.0055591054313099035);
+})
